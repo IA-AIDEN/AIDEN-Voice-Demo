@@ -148,3 +148,87 @@ body {
         padding: 0 20px;
     }
 }
+
+/* --------------------------
+   LAYOUT PARA PÁGINA DE BLOQUEO
+--------------------------- */
+.page {
+    min-height: 100vh;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 16px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor del mensaje de bloqueo */
+.block-wrapper {
+    margin-top: 40px;
+    max-width: 680px;
+    text-align: center;
+}
+
+/* Texto principal del bloqueo */
+.block-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #E4E4E4;
+    margin-bottom: 40px;
+}
+
+/* Fila de botones */
+.buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Botón base */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+/* Botón 1 – Volver */
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #4a35ff;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: rgba(74, 53, 255, 0.18);
+}
+
+/* Botón 2 – Solicitar demo */
+.btn-primary {
+    background: #4a35ff;
+    color: white;
+    border: 1px solid #4a35ff;
+}
+
+.btn-primary:hover {
+    background: #6957ff;
+}
+
+/* Responsive: botones a una sola columna en móvil */
+@media (max-width: 768px) {
+    .buttons-row {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 320px;
+    }
+}
