@@ -1,159 +1,166 @@
 /* --------------------------
-   ESTILO GENERAL
+   RESETEO BÁSICO
 --------------------------- */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* --------------------------
+   ESTILO GENERAL
+--------------------------- */
 body {
-    background-color: #0E1117;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
+  background-color: #0E1117;
+  color: #FFFFFF;
+  font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.page {
+  min-height: 100vh;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 16px 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* --------------------------
    ENCABEZADO
 --------------------------- */
 .header {
-    padding-top: 50px;
-    position: relative;
+  position: relative;           /* necesario para el glow animado */
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .logo {
-    width: 180px;
-    margin-bottom: 12px;
+  width: 180px;
+  margin-bottom: 10px;
 }
 
 .title {
-    font-size: 45px;
-    font-weight: 700;
-    margin-top: 10px;
+  font-size: 45px;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
 .subtitle {
-    font-size: 16px;
-    opacity: 0.9;
+  font-size: 16px;
+  margin-top: -5px;
+  opacity: 0.9;
 }
 
 .limit {
-    font-size: 14px;
-    opacity: 0.75;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Glow decorativo suave */
+.header::after {
+  content: "";
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,102,255,0.16), rgba(255,0,180,0.08));
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  filter: blur(30px);
+  opacity: 0.7;
+  animation: pulse 6s infinite alternate;
+}
+
+@keyframes pulse {
+  0%   { opacity: 0.35; transform: scale(1); }
+  100% { opacity: 0.9;  transform: scale(1.25); }
 }
 
 /* --------------------------
    SECCIÓN DE VOZ
 --------------------------- */
 .voice-section {
-    margin-top: 40px;
+  margin-top: 40px;          /* espacio bajo el encabezado */
 }
 
 .voice-title {
-    font-size: 26px;
-    margin-bottom: 6px;
+  font-size: 26px;
+  margin-bottom: 8px;
 }
 
 .voice-note {
-    font-size: 14px;
-    opacity: 0.85;
-    margin-bottom: 25px;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 40px;       /* espacio antes del widget */
 }
 
-/* --------------------------
-   CENTRAR EL WIDGET
---------------------------- */
-.widget-container {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    margin-bottom: 90px;
-}
-
-/* OVERRIDE OFICIAL PARA QUE DEJE DE IR A LA ESQUINA */
-elevenlabs-convai {
-    --convai-widget-position: static !important;
-    --convai-widget-bottom: auto !important;
-    --convai-widget-right: auto !important;
-    --convai-widget-left: auto !important;
-    --convai-widget-top: auto !important;
+/* Placeholder para dejar aire donde “vive” el widget flotante */
+.widget-placeholder {
+  height: 140px;             /* ajusta si quieres más/menos aire */
+  margin-bottom: 40px;
 }
 
 /* --------------------------
    BOTÓN VOLVER
 --------------------------- */
 .back-button {
-    display: inline-block;
-    background: #4a35ff;
-    padding: 12px 25px;
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    transition: 0.2s ease;
+  display: inline-block;
+  background: #4A35FF;
+  padding: 12px 26px;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 999px;
+  margin-bottom: 36px;
+  transition: 0.2s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
 }
 
 .back-button:hover {
-    background: #6957ff;
+  background: #6957FF;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
 }
 
 /* --------------------------
    PIE DE PÁGINA
 --------------------------- */
 .footer-info {
-    margin-top: 40px;
-    margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .version {
-    font-size: 13px;
-    opacity: 0.8;
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 6px;
 }
 
 .credits {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-/* --------------------------
-   DECORACIÓN ANIMADA
---------------------------- */
-.header:after {
-    content: "";
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,102,255,0.12), rgba(255,0,180,0.08));
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    filter: blur(35px);
-    animation: pulse 6s infinite alternate;
-}
-
-@keyframes pulse {
-    0% { opacity: 0.3; transform: scale(1); }
-    100% { opacity: 0.9; transform: scale(1.25); }
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 /* --------------------------
    RESPONSIVE
 --------------------------- */
 @media (max-width: 768px) {
-    
-    .title {
-        font-size: 32px;
-    }
+  .page {
+    padding: 28px 14px 40px;
+  }
 
-    .widget-container {
-        margin-bottom: 110px;
-    }
+  .title {
+    font-size: 32px;
+  }
 
-    .voice-note {
-        padding: 0 15px;
-    }
+  .voice-note {
+    padding: 0 20px;
+  }
+
+  .widget-placeholder {
+    height: 180px;  /* más espacio vertical en móvil */
+  }
 }
