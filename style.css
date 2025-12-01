@@ -99,7 +99,7 @@ body {
 
 /* Placeholder para dejar aire donde “vive” el widget flotante */
 .widget-placeholder {
-  height: 40px;             /* ajusta si quieres más/menos aire */
+  height: 50px;             /* ajusta si quieres más/menos aire */
   margin-bottom: 20px;
 }
 
