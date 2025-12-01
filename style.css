@@ -104,47 +104,6 @@ body {
 }
 
 /* --------------------------
-   BOTÓN VOLVER
---------------------------- */
-.back-button {
-  display: inline-block;
-  background: #4A35FF;
-  padding: 12px 26px;
-  color: #FFFFFF;
-  font-size: 15px;
-  text-decoration: none;
-  border-radius: 999px;
-  margin-bottom: 36px;
-  transition: 0.2s ease;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
-}
-
-.back-button:hover {
-  background: #6957FF;
-  transform: translateY(-1px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
-}
-
-/* --------------------------
-   PIE DE PÁGINA
---------------------------- */
-.footer-info {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.version {
-  font-size: 13px;
-  opacity: 0.8;
-  margin-bottom: 6px;
-}
-
-.credits {
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-/* --------------------------
    RESPONSIVE
 --------------------------- */
 @media (max-width: 768px) {
