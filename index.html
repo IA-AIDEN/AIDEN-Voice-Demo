@@ -1,22 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AIDEN Voz — Inteligencia Artificial Latina</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
 <body>
     <header class="header">
         <img src="logo.png" alt="AIDEN Logo" class="logo">
         <h1 class="title">AIDEN — Inteligencia Artificial Latina</h1>
-        <p class="subtitle">Conversación fluida, profesional y disciplinada en español latino. <span class="limit">(sesión por tiempo limitado: 3 minutos)</span></p>
+        <p class="subtitle">
+            Conversación fluida, profesional y disciplinada en español latino.
+            <span class="limit">(sesión por tiempo limitado: 3 minutos)</span>
+        </p>
     </header>
 
     <section class="voice-section">
         <h2 class="voice-title">🎙️ Habla con AIDEN Voz</h2>
         <p class="voice-note">(Permite el acceso al micrófono cuando el navegador lo solicite y presiona “Iniciar conversación”.)</p>
 
-        <!-- Widget debe quedarse exactamente aquí -->
+        <!-- CONTENEDOR CENTRADO -->
         <div class="widget-container">
             <elevenlabs-convai agent-id="agent_8101kaqsd0pqeeyav22xa5esexht"></elevenlabs-convai>
         </div>
 
-        <p class="space-expansion"></p>
-
-        <a href="https://www.jmcstudiocreativo.com/aiden-bienvenida-inteligencia-artificial-latina" class="back-button">← Volver a la página de bienvenida de AIDEN</a>
+        <a href="https://www.jmcstudiocreativo.com/aiden-bienvenida-inteligencia-artificial-latina" class="back-button">
+            ← Volver a la página de bienvenida de AIDEN
+        </a>
 
         <div class="footer-info">
             <p class="version">AIDEN Prototipo 1.0.1 — Puede tener un margen de error del 5%</p>
@@ -25,5 +42,6 @@
     </section>
 
     <!-- Script del widget -->
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async></script>
 </body>
+</html>
