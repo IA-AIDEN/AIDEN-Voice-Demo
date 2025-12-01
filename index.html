@@ -1,56 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIDEN – Voz Latina | Inteligencia Artificial Latina</title>
-  <meta name="description" content="Habla en tiempo real con AIDEN, la primera Inteligencia Artificial Latina, con voz profesional en español latino neutro. Versión demo para inversionistas." />
-  <link rel="icon" type="image/png" href="assets/aiden-logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <img src="assets/aiden-logo.png" alt="AIDEN – Inteligencia Artificial Latina" class="hero__logo" />
-      <h1 class="hero__title">AIDEN – Inteligencia Artificial Latina</h1>
-      <p class="hero__subtitle">
-        Conversación fluida, profesional y disciplinada en español latino.
-        <span class="hero__subtitle-tag">(sesión por tiempo limitado)</span>
-      </p>
+    <header class="header">
+        <img src="logo.png" alt="AIDEN Logo" class="logo">
+        <h1 class="title">AIDEN — Inteligencia Artificial Latina</h1>
+        <p class="subtitle">Conversación fluida, profesional y disciplinada en español latino. <span class="limit">(sesión por tiempo limitado: 3 minutos)</span></p>
     </header>
 
-    <section class="widget-section">
-      <h2 class="widget-section__title">🎙️ Habla con AIDEN Voz</h2>
-      <p class="widget-section__text">
-        Presiona el botón para iniciar una conversación de voz en tiempo real con AIDEN.
-        Esta es una versión demo para pruebas internas y reuniones con inversionistas.
-      </p>
+    <section class="voice-section">
+        <h2 class="voice-title">🎙️ Habla con AIDEN Voz</h2>
+        <p class="voice-note">(Permite el acceso al micrófono cuando el navegador lo solicite y presiona “Iniciar conversación”.)</p>
 
-      <div class="widget-section__card">
-        <!-- ElevenLabs Convai widget -->
-        <elevenlabs-convai agent-id="agent_8101kaqsd0pqeeyav22xa5esexht"></elevenlabs-convai>
-      </div>
+        <!-- Widget debe quedarse exactamente aquí -->
+        <div class="widget-container">
+            <elevenlabs-convai agent-id="agent_8101kaqsd0pqeeyav22xa5esexht"></elevenlabs-convai>
+        </div>
 
-      <p class="widget-section__note">
-        Para una mejor experiencia, usa audífonos y permite el acceso al micrófono cuando el navegador lo solicite.
-      </p>
+        <p class="space-expansion"></p>
+
+        <a href="https://www.jmcstudiocreativo.com/aiden-bienvenida-inteligencia-artificial-latina" class="back-button">← Volver a la página de bienvenida de AIDEN</a>
+
+        <div class="footer-info">
+            <p class="version">AIDEN Prototipo 1.0.1 — Puede tener un margen de error del 5%</p>
+            <p class="credits">AIDEN — Desarrollado por JMC Studio Creativo desde Guayaquil, Ecuador.</p>
+        </div>
     </section>
 
-    <section class="nav-section">
-      <a class="nav-section__btn" href="https://www.jmcstudiocreativo.com/aiden-bienvenida-inteligencia-artificial-latina">
-        ← Volver a la página principal de AIDEN
-      </a>
-    </section>
-
-    <footer class="footer">
-      <p>AIDEN — Desarrollado por JMC Studio Creativo desde Guayaquil, Ecuador.</p>
-      <p class="footer__small">Versión demo privada para evaluación e inversión. No compartir sin autorización.</p>
-    </footer>
-  </main>
-
-  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <!-- Script del widget -->
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
-</html>
