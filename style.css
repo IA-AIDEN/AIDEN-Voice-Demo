@@ -1,152 +1,143 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
+/* --------------------------
+   ESTILO GENERAL
+--------------------------- */
 body {
-  font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #0E1117;
-  color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    background-color: #0E1117;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
-.page {
-  min-height: 100vh;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 32px 16px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+/* --------------------------
+   ENCABEZADO
+--------------------------- */
+.header {
+    padding-top: 50px;
 }
 
-.hero {
-  text-align: center;
-  margin-top: 24px;
+.logo {
+    width: 180px;
+    margin-bottom: 10px;
 }
 
-.hero__logo {
-  width: 160px;
-  max-width: 60vw;
-  margin-bottom: 16px;
+.title {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 10px 0;
 }
 
-.hero__title {
-  font-size: 45px;
-  line-height: 1.15;
-  font-weight: 700;
-  margin-bottom: 12px;
+.subtitle {
+    font-size: 16px;
+    margin-top: -5px;
+    opacity: 0.9;
 }
 
-.hero__subtitle {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #B3B3B3;
+.limit {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
-.hero__subtitle-tag {
-  display: inline-block;
-  margin-left: 4px;
-  color: #E0E0E0;
+/* --------------------------
+   SECCIÓN DE VOZ
+--------------------------- */
+.voice-section {
+    margin-top: 40px;
 }
 
-.widget-section {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.voice-title {
+    font-size: 26px;
+    margin-bottom: 5px;
 }
 
-.widget-section__title {
-  font-size: 20px;
-  font-weight: 600;
+.voice-note {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 30px;
 }
 
-.widget-section__text {
-  font-size: 14px;
-  color: #D0D0D0;
-  max-width: 640px;
-  margin: 0 auto;
+/* --------------------------
+   WIDGET
+--------------------------- */
+.widget-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px; /* espacio para la expansión del widget */
 }
 
-.widget-section__card {
-  margin: 12px auto 4px;
-  padding: 16px 12px;
-  border-radius: 20px;
-  background: radial-gradient(circle at top, #151A23 0, #05070B 60%, #05070B 100%);
-  box-shadow: 0 18px 80px rgba(0, 0, 0, 0.65);
-  max-width: 420px;
-  width: 100%;
+/* --------------------------
+   BOTÓN VOLVER
+--------------------------- */
+.back-button {
+    display: inline-block;
+    background: #4a35ff;
+    padding: 12px 25px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    transition: 0.2s ease;
 }
 
-.widget-section__card elevenlabs-convai {
-  width: 100%;
+.back-button:hover {
+    background: #6957ff;
 }
 
-.widget-section__note {
-  font-size: 12px;
-  color: #9FA4B0;
-  max-width: 520px;
-  margin: 0 auto;
+/* --------------------------
+   PIE DE PÁGINA
+--------------------------- */
+.footer-info {
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
-.nav-section {
-  display: flex;
-  justify-content: center;
+.version {
+    font-size: 13px;
+    opacity: 0.8;
 }
 
-.nav-section__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #2563EB, #7C3AED);
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+.credits {
+    font-size: 14px;
+    opacity: 0.9;
 }
 
-.nav-section__btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.75);
-  opacity: 0.96;
+/* --------------------------
+   ELEMENTO DECORATIVO ANIMADO
+   (suave, minimalista, no distrae)
+--------------------------- */
+.header:after {
+    content: "";
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,102,255,0.12), rgba(255,0,180,0.08));
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    filter: blur(30px);
+    animation: pulse 6s infinite alternate;
 }
 
-.footer {
-  margin-top: auto;
-  text-align: center;
-  font-size: 11px;
-  color: #8D93A0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+@keyframes pulse {
+    0% { opacity: 0.4; transform: scale(1); }
+    100% { opacity: 0.9; transform: scale(1.25); }
 }
 
-.footer__small {
-  font-size: 10px;
-  color: #6F7480;
-}
-
+/* --------------------------
+   RESPONSIVE
+--------------------------- */
 @media (max-width: 768px) {
-  .page {
-    padding: 24px 14px 32px;
-  }
+    .title {
+        font-size: 32px;
+    }
 
-  .hero__title {
-    font-size: 32px;
-  }
+    .widget-container {
+        margin-bottom: 100px; /* más espacio en celular */
+    }
 
-  .widget-section__card {
-    max-width: 100%;
-  }
+    .voice-note {
+        padding: 0 20px;
+    }
 }
