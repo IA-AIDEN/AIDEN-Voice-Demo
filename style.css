@@ -1,9 +1,15 @@
 /* --------------------------
    ESTILO GENERAL
 --------------------------- */
-body {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     background-color: #0E1117;
     color: white;
     font-family: 'Open Sans', sans-serif;
@@ -58,12 +64,12 @@ body {
 }
 
 /* --------------------------
-   WIDGET
+   WIDGET CENTRADO
 --------------------------- */
 .widget-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px; /* espacio para la expansión del widget */
+    margin-bottom: 80px; /* espacio para expansión */
 }
 
 /* --------------------------
@@ -105,7 +111,6 @@ body {
 
 /* --------------------------
    ELEMENTO DECORATIVO ANIMADO
-   (suave, minimalista, no distrae)
 --------------------------- */
 .header:after {
     content: "";
@@ -129,15 +134,17 @@ body {
    RESPONSIVE
 --------------------------- */
 @media (max-width: 768px) {
+
     .title {
         font-size: 32px;
     }
 
     .widget-container {
-        margin-bottom: 100px; /* más espacio en celular */
+        margin-bottom: 100px;
     }
 
     .voice-note {
         padding: 0 20px;
     }
+
 }
