@@ -1,48 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>AIDEN Voz — Inteligencia Artificial Latina</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDEN — IA Voz Latina</title>
 
-  <!-- Favicon (pon aquí tu icono 32x32 o 48x48) -->
-  <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- Fuente Open Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="page">
-    <header class="header">
-      <!-- IMPORTANTE: el archivo en el repo debe llamarse EXACTAMENTE logo.png -->
-      <img src="assets/logo.png" alt="AIDEN Logo" class="logo">
-      <h1 class="title">AIDEN — Inteligencia Artificial Latina</h1>
-      <p class="subtitle">
-        Conversación fluida, profesional y disciplinada en español latino.
-        <span class="limit">(sesión por tiempo limitado: 3 minutos)</span>
-      </p>
-    </header>
 
-    <section class="voice-section">
-      <h2 class="voice-title">🎙️ Habla con AIDEN Voz</h2>
-      <p class="voice-note">
-        (Permite el acceso al micrófono cuando el navegador lo solicite y presiona “Iniciar conversación”.
-        El botón flotante azul aparecerá en la centrado en la pantalla.)
-      </p>
+    <!-- Bloque de acceso restringido -->
+    <div id="access-guard"></div>
 
-      <!-- Este div sólo reserva espacio visual, el widget seguirá siendo flotante -->
-      <div class="widget-placeholder"></div>
+    <!-- Contenido real -->
+    <div id="page-content" style="display:none;">
 
-    </section>
-  </main>
+        <header class="header">
+            <img src="logo.png" alt="AIDEN Logo" class="logo">
+            <h1 class="title">AIDEN — Inteligencia Artificial Latina</h1>
+            <p class="subtitle">
+                Conversación fluida, profesional y disciplinada en español latino.
+                <span class="limit">(sesión por tiempo limitado: 3 minutos)</span>
+            </p>
+        </header>
 
-  <!-- Script del widget (flotante) -->
-  <elevenlabs-convai agent-id="agent_8101kaqsd0pqeeyav22xa5esexht"></elevenlabs-convai>
-  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+        <section class="voice-section">
+
+            <h2 class="voice-title">🎙️ Habla con AIDEN Voz</h2>
+
+            <p class="voice-note">
+                (Permite el acceso al micrófono cuando el navegador lo solicite y presiona “Iniciar conversación”.
+                El botón flotante azul aparecerá centrado en la pantalla.)
+            </p>
+
+            <!-- Widget embed (botón flotante) -->
+            <div class="widget-container">
+                <elevenlabs-convai agent-id="agent_8101kaqsd0pqeeyav22xa5esexht"></elevenlabs-convai>
+            </div>
+
+            <!-- Sección agregada nuevamente -->
+            <a href="https://www.jmcstudiocreativo.com/aiden-bienvenida-inteligencia-artificial-latina" class="back-button">
+                ← Volver a la página de bienvenida de AIDEN
+            </a>
+
+            <div class="footer-info">
+                <p class="version">AIDEN Prototipo 1.0.1 — Puede tener un margen de error del 5%</p>
+                <p class="credits">AIDEN — Desarrollado por JMC Studio Creativo desde Guayaquil, Ecuador.</p>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Script: control de acceso -->
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const access = params.get("access");
+            const guard = document.getElementById("access-guard");
+            const content = document.getElementById("page-content");
+
+            if (access === "AIDEN2025") {
+                guard.style.display = "none";
+                content.style.display = "block";
+            } else {
+                guard.innerHTML = `
+                    <p style="
+                        margin-top: 80px;
+                        font-family: 'Open Sans', system-ui, sans-serif;
+                        color: #FFFFFF;
+                        text-align: center;
+                        font-size: 18px;
+                        padding: 20px;
+                    ">
+                        🔒 Acceso restringido<br><br>
+                        Esta demo de AIDEN Voz está disponible solo para inversionistas.<br>
+                        Solicita la clave de acceso a JMC Studio Creativo.
+                    </p>
+                `;
+            }
+        })();
+    </script>
+
+    <!-- Script del widget -->
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
 </body>
 </html>
