@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>AIDEN Voz — Inteligencia Artificial Latina</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>AIDEN Voz — Inteligencia Artificial Latina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Favicon (pon aquí tu icono 32x32 o 48x48) -->
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-    <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fuente Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <main class="page">
     <header class="header">
-        <img src="logo.png" alt="AIDEN Logo" class="logo">
-        <h1 class="title">AIDEN — Inteligencia Artificial Latina</h1>
-        <p class="subtitle">
-            Conversación fluida, profesional y disciplinada en español latino.
-            <span class="limit">(sesión por tiempo limitado: 3 minutos)</span>
-        </p>
+      <!-- IMPORTANTE: el archivo en el repo debe llamarse EXACTAMENTE logo.png -->
+      <img src="logo.png" alt="AIDEN Logo" class="logo">
+      <h1 class="title">AIDEN — Inteligencia Artificial Latina</h1>
+      <p class="subtitle">
+        Conversación fluida, profesional y disciplinada en español latino.
+        <span class="limit">(sesión por tiempo limitado: 3 minutos)</span>
+      </p>
     </header>
 
     <section class="voice-section">
-        <h2 class="voice-title">🎙️ Habla con AIDEN Voz</h2>
-        <p class="voice-note">(Permite el acceso al micrófono cuando el navegador lo solicite y presiona “Iniciar conversación”.)</p>
+      <h2 class="voice-title">🎙️ Habla con AIDEN Voz</h2>
+      <p class="voice-note">
+        (Permite el acceso al micrófono cuando el navegador lo solicite y presiona “Iniciar conversación”.
+        El botón flotante azul aparecerá en la esquina inferior derecha de la pantalla.)
+      </p>
 
-        <!-- CONTENEDOR CENTRADO -->
-        <div class="widget-container">
-            <elevenlabs-convai agent-id="agent_8101kaqsd0pqeeyav22xa5esexht"></elevenlabs-convai>
-        </div>
+      <!-- Este div sólo reserva espacio visual, el widget seguirá siendo flotante -->
+      <div class="widget-placeholder"></div>
 
-        <a href="https://www.jmcstudiocreativo.com/aiden-bienvenida-inteligencia-artificial-latina" class="back-button">
-            ← Volver a la página de bienvenida de AIDEN
-        </a>
+      <a href="https://www.jmcstudiocreativo.com/aiden-bienvenida-inteligencia-artificial-latina"
+         class="back-button">
+        ← Volver a la página de bienvenida de AIDEN
+      </a>
 
-        <div class="footer-info">
-            <p class="version">AIDEN Prototipo 1.0.1 — Puede tener un margen de error del 5%</p>
-            <p class="credits">AIDEN — Desarrollado por JMC Studio Creativo desde Guayaquil, Ecuador.</p>
-        </div>
+      <div class="footer-info">
+        <p class="version">AIDEN Prototipo 1.0.1 — Puede tener un margen de error del 5%.</p>
+        <p class="credits">AIDEN — Desarrollado por JMC Studio Creativo desde Guayaquil, Ecuador.</p>
+      </div>
     </section>
+  </main>
 
-    <!-- Script del widget -->
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async></script>
+  <!-- Script del widget (flotante) -->
+  <elevenlabs-convai agent-id="agent_8101kaqsd0pqeeyav22xa5esexht"></elevenlabs-convai>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
