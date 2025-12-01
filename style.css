@@ -94,13 +94,13 @@ body {
 .voice-note {
   font-size: 14px;
   opacity: 0.85;
-  margin-bottom: 40px;       /* espacio antes del widget */
+  margin-bottom: 30px;       /* espacio antes del widget */
 }
 
 /* Placeholder para dejar aire donde “vive” el widget flotante */
 .widget-placeholder {
-  height: 140px;             /* ajusta si quieres más/menos aire */
-  margin-bottom: 40px;
+  height: 40px;             /* ajusta si quieres más/menos aire */
+  margin-bottom: 20px;
 }
 
 /* --------------------------
